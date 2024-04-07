@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="X" />
+  <title>Sommaire</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Sommaire</h1>
+<p class="author">X</p>
+<p class="date">22 Mars, 2024</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#configuration-matérielle-dans-virtualbox"><span class="toc-section-number">1</span> Configuration matérielle dans VirtualBox</a><ul>
+<li><a href="#installation-os-de-base"><span class="toc-section-number">1.1</span> Installation OS de base</a></li>
+<li><a href="#sudo"><span class="toc-section-number">1.2</span> Sudo</a></li>
+<li><a href="#suppléments-invités"><span class="toc-section-number">1.3</span> Suppléments invités</a></li>
+<li><a href="#quelques-questions"><span class="toc-section-number">1.4</span> Quelques Questions</a></li>
+</ul></li>
+<li><a href="#configuration-de-git"><span class="toc-section-number">2</span> Configuration de Git</a><ul>
+<li><a href="#préliminaire"><span class="toc-section-number">2.1</span> Préliminaire</a></li>
+<li><a href="#comparons"><span class="toc-section-number">2.2</span> Comparons</a></li>
+</ul></li>
+<li><a href="#installation-gitea"><span class="toc-section-number">3</span> Installation Gitea</a><ul>
+<li><a href="#listes-de-commandes-à-utiliser-pour-réussir-à-installer-gitea"><span class="toc-section-number">3.1</span> Listes de commandes à utiliser pour réussir à installer Gitea</a></li>
+<li><a href="#commande-permettant-de-modifier-le-fichier-gitea"><span class="toc-section-number">3.2</span> Commande permettant de modifier le fichier Gitea</a></li>
+<li><a href="#interface-graphique-de-gitea"><span class="toc-section-number">3.3</span> Interface graphique de Gitea</a></li>
+<li><a href="#création-avec-le-gui-de-gitea"><span class="toc-section-number">3.4</span> Création avec le GUI de Gitea</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="configuration-matérielle-dans-virtualbox"><span class="header-section-number">1</span> Configuration matérielle dans VirtualBox</h1>
+<blockquote>
+<ol type="1">
+<li>Que signifie “64-bit” dans “Debian 64-bit” ?</li>
+</ol>
+</blockquote>
+<p>64-bit signifie l’achitecture du processeur, et Debian est un sytème d’exploitation linux. Donc notre cas (Debian 64-bit) signifie que l’architecture du processeur est 64-bit sur un système d’exploitation Debian.</p>
+<p><img src="./img/debian.png" /></p>
+<blockquote>
+<ol start="2" type="1">
+<li>Quelle est la configuration réseau utilisée par défaut ?</li>
+</ol>
+</blockquote>
+<p>La configuration réseau utilisée par défaut est Network Address Translation (c’est-à-dire NAT). Le NAT permet à plusieurs appareils de partager un nombre limité d’adresses IP publiques il améliore donc améliore la sécurité et optimise la gestion des adresses IP.</p>
+<blockquote>
+<ol start="3" type="1">
+<li>Quel est le nom du fichier XML contenant la configuration de votre machine ?</li>
+</ol>
+</blockquote>
+<p>Le fichier XML qui contient la configuration la VM est dans le chemin :</p>
+<pre><code>~/.VirtualBox/Machines/sae203/sae203.xml</code></pre>
+<blockquote>
+<ol start="4" type="1">
+<li>Sauriez-vous le modifier directement ce fichier de configuration pour mettre 2 processeurs à votre machine ?</li>
+</ol>
+</blockquote>
+<p>On peut en effet ajouter 1 autre processeur à notre machine en modifiant la valeur count dans le fichier XML</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">&lt;CPU</span><span class="ot"> count=</span><span class="st">&quot;1&quot;</span><span class="kw">/&gt;</span></a></code></pre></div>
+<p>    On remplace le 1 par 2</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode xml"><code class="sourceCode xml"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">&lt;CPU</span><span class="ot"> count=</span><span class="st">&quot;2&quot;</span><span class="kw">/&gt;</span></a></code></pre></div>
+<p>(N’oublions pas d’enregistrer)</p>
+<h2 id="installation-os-de-base"><span class="header-section-number">1.1</span> Installation OS de base</h2>
+<blockquote>
+<ol type="1">
+<li>Qu’est-ce qu’un fichier ISO bootable ?</li>
+</ol>
+</blockquote>
+<p>Un fichier ISO bootable est un fichier conçu pour s’éxecuter au démarrage de l’ordinateur et installer des systèmes d’exploitations par exemple.</p>
+<blockquote>
+<ol start="2" type="1">
+<li>Qu’est-ce que MATE ? GNOME ?</li>
+</ol>
+</blockquote>
+<p>MATE est un environnement de bureau libre et open source pour les systèmes d’exploitation de type Unix, dérivé de GNOME 2, il permet de fournir un environnement de bureau stable et traditionnel avec une interface utilisateur intuitive et des applications configurables.</p>
+<p>Gnome (acronyme de GNU Network Object Model Environment) est lui aussi un environnement de bureau libre et open source pour les systèmes d’exploitation de type Unix. Il vise à fournir une interface utilisateur intuitive et accessible à tous ainsi qu’un large éventail d’applications.</p>
+<blockquote>
+<ol start="3" type="1">
+<li>Qu’est-ce qu’un serveur web ?</li>
+</ol>
+</blockquote>
+<p>Un serveur web est un ordinateur qui stocke, traite et envoie de sites web aux navigateurs web des utilisateurs. Il est essentiel au fonctionnement du W3C (ou World Wide Web Consortium, est un organisme international qui développe des standards pour le Web afin que les gens puissent communiquer efficacement à travers Internet) car il permet aux internautes d’accéder aux pages web, aux images, aux vidéos et aux autres contenus hébergés sur des serveurs distants.</p>
+<blockquote>
+<ol start="4" type="1">
+<li>Qu’est-ce qu’un serveur ssh ?</li>
+</ol>
+</blockquote>
+<p>Un serveur SSH, ou Secure Shell Server, est un logiciel qui s’exécute sur un ordinateur et qui permet aux utilisateurs de se connecter à cet ordinateur à distance de manière sécurisée.</p>
+<p><img src="./img/ssh.png" /></p>
+<blockquote>
+<ol start="5" type="1">
+<li>Qu’est-ce qu’un serveur mandataire ?</li>
+</ol>
+</blockquote>
+<p>Un serveur mandataire, aussi appelé proxy, est un intermédiaire entre un serveur et un client sur un réseau. Il agit comme un “relais” pour les requêtes et les réponses.</p>
+<h2 id="sudo"><span class="header-section-number">1.2</span> Sudo</h2>
+<blockquote>
+<ol type="1">
+<li>Comment peux-ton savoir à quels groupes appartient l’utilisateur user ?</li>
+</ol>
+</blockquote>
+<p>Pour voir à quels groupes appaartient l’utilsateur user on utilise la commande suivante:</p>
+<pre><code>grep &quot;user&quot; /etc/group</code></pre>
+<p>Ce qui donne:</p>
+<p><img src="./img/grep.png" /></p>
+<p>grep qui permet d’afficher les lignes avec un motif (en l’occurence user)</p>
+<h2 id="suppléments-invités"><span class="header-section-number">1.3</span> Suppléments invités</h2>
+<blockquote>
+<ol type="1">
+<li>Quel est la version du noyau Linux utilisé par votre VM ?</li>
+</ol>
+</blockquote>
+<p>Par défaut le Noyau Linux 5.4 est utilisé</p>
+<blockquote>
+<ol start="2" type="1">
+<li>À quoi servent les suppléments invités ?</li>
+</ol>
+</blockquote>
+<p>Les suppléments invités permettent d’améliorer les performances de notre VM</p>
+<blockquote>
+<ol start="3" type="1">
+<li>À quoi sert la commande mount ?</li>
+</ol>
+</blockquote>
+<p>Il permet de monter un système de fichier ou lister comme un disque dur par exemple</p>
+<p><img src="./img/mount.png" /></p>
+<h2 id="quelques-questions"><span class="header-section-number">1.4</span> Quelques Questions</h2>
+<blockquote>
+<ol type="1">
+<li>Qu’est-ce que le Projet Debian ? D’où vient le nom Debian ?</li>
+</ol>
+</blockquote>
+<p>      Combinaison des noms de Ian Murdock et de sa petite amie de l’époque, <a href="https://www.debian.org/doc/manuals/project-history/project-history.fr.pdf">Debra Lynn.</a></p>
+<blockquote>
+<ol start="2" type="1">
+<li>Il existe 3 durées de prise en charge (support) de ces versions : la durée minimale, la durée en support long terme (LTS) et la durée en support long terme étendue (ELTS). Quelle sont les durées de ces prises en charge ?</li>
+</ol>
+</blockquote>
+<ul>
+<li>La durée de prise en charge minimale (version stable) est de <a href="https://www.debian.org/releases/index.fr.html">3 ans</a></li>
+<li>La durée de prise en charge à long terme de Debian (Debian Long Term Support – LTS), est un projet pour étendre la durée de vie de toutes les versions stables de Debian à (au moins) <a href="https://www.debian.org/lts/index.fr.html">5 ans</a></li>
+<li>La durée de support long terme étendue quant à elle permet d’ajouter une durée de 1 an (en plus des 5 ans de LTS)</li>
+</ul>
+<blockquote>
+<ol start="3" type="1">
+<li>Pendant combien de temps les mises à jour de sécurité seront-elles fournies ?</li>
+</ol>
+</blockquote>
+<ul>
+<li>3 ans pour la version stable</li>
+<li>5 ans pour la version support long terme (LTS)</li>
+<li>1 an de mises à jour de sécurité uniquement (en plus des 5 ans de LTS) - pour la version ELTS (support long terme étendue)</li>
+</ul>
+<blockquote>
+<ol start="4" type="1">
+<li>Combien de version au minimum sont activement maintenues par Debian ? Donnez leur nom générique (= les types de distribution).</li>
+</ol>
+</blockquote>
+<p><a href="https://www.debian.org/releases/index.fr.html">3 versions</a> sont activement maintenues par Debian : “stable”, “testing”, “unstable”</p>
+<blockquote>
+<ol start="5" type="1">
+<li>Chaque distribution majeur possède un nom de code différent. Par exemple, la version majeur actuelle (Debian 12) se nomme bookworm. D’où viennent les noms de code données aux distributions ?</li>
+</ol>
+</blockquote>
+<p>Les noms de code données aux distributions proviennent du nom des personnages du film d’animation Pixar Toy Story.</p>
+<blockquote>
+<ol start="6" type="1">
+<li>L’un des atouts de Debian fut le nombre d’architecture ( = processeurs) officiellement prises en charge. Combien et lesquelles sont prises en charge par la version Bullseye ?</li>
+</ol>
+</blockquote>
+<p> Il y’a officiellement <a href="https://www.debian.org/ports/">8 architectures</a> prises en charge (amd64, arm64, armel, armhf, i386, mips64el, ppc54el, powerpc64, s390x) dont riscv64 “en test”</p>
+<blockquote>
+<ol start="7" type="1">
+<li>Première version avec un nom de code</li>
+</ol>
+</blockquote>
+<p>    Le premier nom de code attribué est Buzz annoncé en 1996, c’est la version 0.93</p>
+<blockquote>
+<ol start="8" type="1">
+<li>Dernière nom de code attribué</li>
+</ol>
+</blockquote>
+<p>Le dernier nom de code attribué est “Bookworm” annoncé en 2022, c’est Debian 12</p>
+<h1 id="configuration-de-git"><span class="header-section-number">2</span> Configuration de Git</h1>
+<p><img src="./img/affichagegitk.png" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1"><span class="fu">git</span> config --global user.name <span class="st">&quot;Prénom Nom&quot;</span></a></code></pre></div>
+<p>Cette ligne de commande permet d’associer votre nom d’utilisateur à Git.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1"><span class="fu">git</span> config --global user.email <span class="st">&quot;votre@email&quot;</span></a></code></pre></div>
+<p>Cette ligne de commande permet d’associer votre adresse e-mail à Git.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="fu">git</span> config --global init.defaultBranch <span class="st">&quot;main&quot;</span></a></code></pre></div>
+<p>Cette ligne de commande permet d’associer le nom de la branche avec Git (par défaut main)</p>
+<p>Voici les commandes utilisées:</p>
+<p><img src="./img/historiquevm.PNG" /></p>
+<h2 id="préliminaire"><span class="header-section-number">2.1</span> Préliminaire</h2>
+<blockquote>
+<ol type="1">
+<li>Qu’est-ce que le logiciel gitk ? Comment se lance-t-il ?</li>
+</ol>
+</blockquote>
+<p>Gitk est une interface graphique qui permet de naviguer dans des dépots git plus simplement qu’avec l’affichage terminal<br />
+Linux: Tapez gitk dans votre terminal.<br />
+MacOS: Utilisez Spotlight pour rechercher “Gitk” et lancez l’application.<br />
+Windows: Recherchez “Gitk” dans le menu Démarrer et lancez l’application.</p>
+<blockquote>
+<p>1.2 Qu’est-ce que le logiciel git-gui ? Comment se lance-t-il ?</p>
+</blockquote>
+<p>Git-gui est un logiciel d’interface graphique (GUI) pour le système de contrôle de version Git. Il permet d’effectuer des opérations comme créer et cloner des dépôts et afficher l’historique des commits</p>
+<h2 id="comparons"><span class="header-section-number">2.2</span> Comparons</h2>
+<blockquote>
+<ol type="1">
+<li>Pourquoi avez-vous choisi ce logiciel ?</li>
+</ol>
+</blockquote>
+<p>Il y’a une interface intuitive pour une utilisation facile. et des Outils optimisés pour accélérer le développement (en général).</p>
+<blockquote>
+<ol start="2" type="1">
+<li>Comment l’avez vous installé ?</li>
+</ol>
+</blockquote>
+<p>GitKraken est assez simple à installer il y’a juste un fichier en .deb qu’il faut utiliser en mettant cette commande:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1"><span class="fu">sudo</span> dpkg -i <span class="st">&quot;fichier&quot;</span>.deb</a></code></pre></div>
+<blockquote>
+<ol start="3" type="1">
+<li>Comparer-le aux outils inclus avec git (et installé précédemment) ainsi qu’avec ce qui serait fait en ligne de commande pure : fonctionnalités avantages, inconvénients…</li>
+</ol>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 44%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Avantages</th>
+<th>Inconvénients</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Git</td>
+<td>Puissants, flexibles, légers, intégrés.</td>
+<td>Courbe d’apprentissage, manque de visuel, CLI complexe.</td>
+</tr>
+<tr class="even">
+<td>GitKraken</td>
+<td>Interface intuitive, collaboration, visualisation, facile à apprendre.</td>
+<td>Moins flexible, installation nécessaire, version gratuite limitéé</td>
+</tr>
+<tr class="odd">
+<td>Ligne de Commande Pure</td>
+<td>Puissants, flexibles, légers, intégrés.</td>
+<td>Syntaxe complexe, erreurs possibles, pas de visuel.</td>
+</tr>
+</tbody>
+</table>
+<p>Conclusion:</p>
+<p>Débutants: GitKraken<br />
+Expérimentés: Outils Git Natifs<br />
+Avancés: Ligne de Commande</p>
+<h1 id="installation-gitea"><span class="header-section-number">3</span> Installation Gitea</h1>
+<h2 id="listes-de-commandes-à-utiliser-pour-réussir-à-installer-gitea"><span class="header-section-number">3.1</span> Listes de commandes à utiliser pour réussir à installer Gitea</h2>
+<p><img src="./img/historiquegitea.png" /></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1"><span class="fu">sudo</span> su <span class="co">#Se connecter en super-utilisateur (root)</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="ex">apt</span> install mariadb-server <span class="co">#Installer Maria-DB</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="ex">adduser</span> --system --group --disabled-password --shell /bin/bash git  <span class="co">#Crée un utilisateur &quot;git&quot; sans mot de passe.</span></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="ex">mysql</span> -u root -p <span class="co">#Se connecte à MySQL en tant que &quot;root&quot;</span></a>
+<a class="sourceLine" id="cb9-5" title="5"><span class="fu">nano</span> /etc/systemd/system/gitea.service <span class="co">#Ouvre le fichier de configuration systemd</span></a>
+<a class="sourceLine" id="cb9-6" title="6"><span class="ex">systemctl</span> start gitea <span class="co">#Démarre le service Gitea manuellement</span></a>
+<a class="sourceLine" id="cb9-7" title="7"><span class="fu">nano</span> /etc/nginx/sites-available/gitea <span class="co">#Ouvre le fichier de configuration Nginx</span></a></code></pre></div>
+<h2 id="commande-permettant-de-modifier-le-fichier-gitea"><span class="header-section-number">3.2</span> Commande permettant de modifier le fichier Gitea</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb10-1" title="1"><span class="fu">sudo</span> ln -s /etc/nginx/sites-available/gitea /etc/nginx/sites-enabled/ <span class="co">#Crée un lien symbolique pour activer la configuration Nginx </span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="fu">sudo</span> apt install ufw <span class="co">#Installe le pare-feu UFW (si pas déjà installé)</span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="fu">sudo</span> ufw enable <span class="co">#Installe le pare-feu UFW (si pas déjà installé)</span></a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="fu">sudo</span> ufw allow 80/tcp <span class="co">#Autorise le trafic HTTP (port 80) via UFW</span></a>
+<a class="sourceLine" id="cb10-5" title="5"><span class="fu">sudo</span> ufw allow 443/tcp <span class="co">#Idem mais pour HTTPS (port 443)</span></a></code></pre></div>
+<p><img src="./img/nano.PNG" /></p>
+<h2 id="interface-graphique-de-gitea"><span class="header-section-number">3.3</span> Interface graphique de Gitea</h2>
+<p><img src="./img/giteamain.PNG" /></p>
+<h2 id="création-avec-le-gui-de-gitea"><span class="header-section-number">3.4</span> Création avec le GUI de Gitea</h2>
+<p><img src="./img/testcrea.PNG" /></p>
+<style>
+
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les titres */
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* Style pour les paragraphes */
+p {
+  color: #666;
+}
+
+/* Style pour les liens */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style pour les listes */
+ul, ol {
+  margin-bottom: 15px;
+}
+
+/* Style pour les listes imbriquées */
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Style pour les blocs de citation */
+blockquote {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+/* Style pour les images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Style pour les tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style pour les légendes de figure */
+figcaption {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Style pour le pied de page */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+</style>
+</body>
+</html>
